@@ -1,15 +1,12 @@
 from flask import Flask, Response
-
-# from flask_redis import FlaskRedis
-
-# r = FlaskRedis()
+from . import config
+import redis
+redis_db = redis.Redis(host='localhost', port=6379, db=0)
 
 def create_app():
     """Initialize the core application."""
     app = Flask(__name__, instance_relative_config=False)
-    # app.config.from_object('config.Config')
-
-    # r.init_app(app)
+    app.config.from_object(config.Config)
 
     from . import routes
 
