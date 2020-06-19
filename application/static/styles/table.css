@@ -130,3 +130,8 @@
 .dataTables_wrapper .dataTables_paginate .paginate_button {
     color: #00beaf !important;
 }
+
+.dataTables_filter {
+    float: left !important;
+    text-align: left !important;
+}

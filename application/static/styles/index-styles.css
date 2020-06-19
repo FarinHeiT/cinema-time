@@ -19,7 +19,8 @@ html {
 
 .container {
     height: 100vh;
-    background-image: linear-gradient(rgba(33, 33, 33, .75), rgba(33, 33, 33, .75)), url("images/bg.jpg");
+    /*background-image: linear-gradient(rgba(33, 33, 33, .75), rgba(33, 33, 33, .75)), url("images/bg.jpg");*/
+    background-color: #323232;
     background-size: cover;
     display: flex;
     flex-direction: column;
