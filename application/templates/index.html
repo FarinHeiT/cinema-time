@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {#  JQuery  #}
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index-styles.css') }}">
+
+    {# docSlider #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='scripts/slider/docSlider.css') }}" />
+    <script src="{{ url_for('static', filename='scripts/slider/docSlider.js') }}"></script>
+
+    {#  Ionicons  #}
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+
+    {#  datatables  #}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+    {#  Table styles  #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/table.css') }}" />
+</head>
+<body>
+<div class="docSlider">
+    <section class="search-section">
+        <div class="container">
+            <div class="main-container">
+                <h1>Put The Link In Here</h1>
+                <h4>Supported: YouTube, Direct Link, etc.</h4>
+                <div class="input-container">
+                    <input type="text" placeholder="Link" />
+                    <a class="pure-button" href="#">A Pure Button</a>
+                </div>
+                <h4>or join to an existing room</h4>
+                <h5>SCROLL DOWN</h5>
+                <ion-icon name="arrow-down-outline"></ion-icon>
+            </div>
+        </div>
+    </section>
+    <section class="room-list-section">
+        <h1>Rooms</h1>
+        <div class="table-container">
+
+            <table class="pure-table table-custom" id="rooms">
+                <thead>
+                <tr>
+                    <th><h1>Sites</h1></th>
+                    <th><h1>Views</h1></th>
+                    <th><h1>Clicks</h1></th>
+                    <th><h1>Average</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Google</td>
+                    <td>9518</td>
+                    <td>6369</td>
+                    <td>01:32:50</td>
+                </tr>
+                <tr>
+                    <td>Twitter</td>
+                    <td>7326</td>
+                    <td>10437</td>
+                    <td>00:51:22</td>
+                </tr>
+                <tr>
+                    <td>Amazon</td>
+                    <td>4162</td>
+                    <td>5327</td>
+                    <td>00:24:34</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>3654</td>
+                    <td>2961</td>
+                    <td>00:12:10</td>
+                </tr>
+                <tr>
+                    <td>CodePen</td>
+                    <td>2002</td>
+                    <td>4135</td>
+                    <td>00:46:19</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                    <td>4623</td>
+                    <td>3486</td>
+                    <td>00:31:52</td>
+                </tr>
+                <tr>
+                    <td>CodePen</td>
+                    <td>2002</td>
+                    <td>4135</td>
+                    <td>00:46:19</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                    <td>4623</td>
+                    <td>3486</td>
+                    <td>00:31:52</td>
+                </tr>
+                <tr>
+                    <td>CodePen</td>
+                    <td>2002</td>
+                    <td>4135</td>
+                    <td>00:46:19</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                    <td>4623</td>
+                    <td>3486</td>
+                    <td>00:31:52</td>
+                </tr>
+                <tr>
+                    <td>CodePen</td>
+                    <td>2002</td>
+                    <td>4135</td>
+                    <td>00:46:19</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                    <td>4623</td>
+                    <td>3486</td>
+                    <td>00:31:52</td>
+                </tr>
+                <tr>
+                    <td>CodePen</td>
+                    <td>2002</td>
+                    <td>4135</td>
+                    <td>00:46:19</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                    <td>4623</td>
+                    <td>3486</td>
+                    <td>00:31:52</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+</body>
+</html>
