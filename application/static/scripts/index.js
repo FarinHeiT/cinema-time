@@ -17,6 +17,8 @@ window.onload = function(){
 	const openRoomSettings = document.querySelector(".pure-button")
     const  closeRoomSettings = document.querySelector(".modal-close")
     const overlay = document.querySelector('#modal-overlay')
+    const checkbox = document.querySelector('#private-room-checkbox')
+    const password = document.querySelector('#invisible')
 
     openRoomSettings.onclick = function(){
     	const modal = document.querySelector('#room-settings')
@@ -35,5 +37,14 @@ window.onload = function(){
     	const modal = document.querySelector('#room-settings')
     	modal.classList.remove('active')
     	overlay.classList.remove('active')
+    }
+
+    checkbox.onclick = function(){
+        if (checkbox.checked == true){
+            password.classList.add('active')
+        }
+        else{
+            password.classList.remove('active')
+        }
     }
 }

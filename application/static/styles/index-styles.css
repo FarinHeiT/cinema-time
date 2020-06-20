@@ -67,6 +67,10 @@ html {
     opacity: 1;
     pointer-events: all; 
 }
+
+#private-room-checkbox{
+    padding-left: 10;
+}
 /*end popup*/
 
 .pure-button {
@@ -118,6 +122,18 @@ input[type='text'], input[type='search'] {
     width: 60%;
     height: 20%;
     color: #7afff4;
+}
+
+input[type='text']{
+    margin: 5px;
+}
+
+#invisible{
+    opacity: 0;
+}
+
+#invisible.active{
+    opacity: 1;
 }
 
 textarea:focus, input:focus{
