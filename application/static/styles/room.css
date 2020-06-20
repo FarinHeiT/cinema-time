@@ -1,0 +1,13 @@
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+#screen {
+    width: 80%;
+}
+
+#chat {
+    width: 20%;
+    border-left: 5px solid black;
+}

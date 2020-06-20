@@ -26,6 +26,10 @@
 
     {#  Table styles  #}
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/table.css') }}" />
+
+    {#  Sockets  #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
 </head>
 <body>
 <div class="docSlider">
@@ -36,7 +40,7 @@
                 <h4>Supported: YouTube, Direct Link, etc.</h4>
                 <div class="input-container">
                     <input type="text" placeholder="Link" />
-                    <a class="pure-button" href="#">A Pure Button</a>
+                    <a class="pure-button" href="#">Create Room</a>
                 </div>
                 <h4>or join to an existing room</h4>
                 <h5>SCROLL DOWN</h5>
@@ -51,9 +55,9 @@
             <table class="pure-table table-custom" id="rooms">
                 <thead>
                 <tr>
-                    <th><h1>Sites</h1></th>
-                    <th><h1>Views</h1></th>
-                    <th><h1>Clicks</h1></th>
+                    <th><h1>Room Name</h1></th>
+                    <th><h1>Users</h1></th>
+                    <th><h1>Status</h1></th>
                     <th><h1>Average</h1></th>
                 </tr>
                 </thead>
