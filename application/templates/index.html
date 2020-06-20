@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+          integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {#  JQuery  #}
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    {# JQuery #}
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,700;1,400&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/index-styles.css') }}">
 
     {# docSlider #}
-    <link rel="stylesheet" href="{{ url_for('static', filename='scripts/slider/docSlider.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='scripts/slider/docSlider.css') }}"/>
     <script src="{{ url_for('static', filename='scripts/slider/docSlider.js') }}"></script>
 
-    {#  Ionicons  #}
+    {# Ionicons #}
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 
-    {#  datatables  #}
+    {# datatables #}
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 
-    {#  Table styles  #}
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/table.css') }}" />
+    {# Table styles #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/table.css') }}"/>
+
+    {# Sockets #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 </head>
 <body>
 <div class="docSlider">
@@ -35,17 +41,18 @@
                 <h1>Put The Link In Here</h1>
                 <h4>Supported: YouTube, Direct Link, etc.</h4>
                 <div class="input-container">
-                    <input type="text" placeholder="Link" />
+                    <input type="text" placeholder="Link"/>
                     <button class="pure-button">Create Room</button>
-                    <div id="room-settings">
-                        <div class="modal-header">
-                            <div class="modal-title">Room Settings</div>
-                            <button class="modal-close">&times;</button>
-                        </div>
-                        <div class="modal-body"></div>
+                </div>
+                <div id="room-settings">
+                    <div class="modal-header">
+                        <div class="modal-title">Room Settings</div>
+                        <button class="modal-close">&times;</button>
                     </div>
-                    <div id="modal-overlay">
-                    </div>
+                    <div class="modal-body"></div>
+                </div>
+                <div id="modal-overlay">
+                </div>
                 <h4>or join to an existing room</h4>
                 <h5>SCROLL DOWN</h5>
                 <ion-icon name="arrow-down-outline"></ion-icon>
@@ -59,9 +66,9 @@
             <table class="pure-table table-custom" id="rooms">
                 <thead>
                 <tr>
-                    <th><h1>Sites</h1></th>
-                    <th><h1>Views</h1></th>
-                    <th><h1>Clicks</h1></th>
+                    <th><h1>Room Name</h1></th>
+                    <th><h1>Users</h1></th>
+                    <th><h1>Status</h1></th>
                     <th><h1>Average</h1></th>
                 </tr>
                 </thead>
