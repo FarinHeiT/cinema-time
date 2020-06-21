@@ -1,3 +1,13 @@
+
+html {
+    background-color: #323232;
+    margin: 0;
+    padding: 0;
+    color: #14ffec;
+    font-family: 'Archivo Narrow', sans-serif;
+    text-align: center;
+}
+
 .main-container {
     display: flex;
     height: 100vh;
@@ -9,5 +19,5 @@
 
 #chat {
     width: 20%;
-    border-left: 5px solid black;
+    border-left: 5px solid #00beaf;
 }

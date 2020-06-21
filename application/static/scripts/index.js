@@ -4,46 +4,46 @@ docSlider.init({
 });
 
 // datatables Initialization
-$(document).ready( function () {
+$(document).ready(function () {
     $('#rooms').DataTable({
-        "bLengthChange" : false,
+        "bLengthChange": false,
         language: {
             searchPlaceholder: "Search Room"
         }
     });
-} );
+});
 
-window.onload = function(){
-	const openRoomSettings = document.querySelector(".pure-button")
-    const  closeRoomSettings = document.querySelector(".modal-close")
+// Modal window
+window.onload = function () {
+    const openRoomSettings = document.querySelector(".pure-button")
+    const closeRoomSettings = document.querySelector(".modal-close")
     const overlay = document.querySelector('#modal-overlay')
     const checkbox = document.querySelector('#private-room-checkbox')
     const password = document.querySelector('#invisible')
 
-    openRoomSettings.onclick = function(){
-    	const modal = document.querySelector('#room-settings')
-    	modal.classList.add('active')
-    	overlay.classList.add('active')
+    openRoomSettings.onclick = function () {
+        const modal = document.querySelector('#room-settings')
+        modal.classList.add('active')
+        overlay.classList.add('active')
 
     }
 
-    closeRoomSettings.onclick = function(){
-    	const modal = document.querySelector('#room-settings')
-    	modal.classList.remove('active')
-    	overlay.classList.remove('active')
+    closeRoomSettings.onclick = function () {
+        const modal = document.querySelector('#room-settings')
+        modal.classList.remove('active')
+        overlay.classList.remove('active')
     }
 
-    overlay.onclick = function(){
-    	const modal = document.querySelector('#room-settings')
-    	modal.classList.remove('active')
-    	overlay.classList.remove('active')
+    overlay.onclick = function () {
+        const modal = document.querySelector('#room-settings')
+        modal.classList.remove('active')
+        overlay.classList.remove('active')
     }
 
-    checkbox.onclick = function(){
-        if (checkbox.checked == true){
+    checkbox.onclick = function () {
+        if (checkbox.checked == true) {
             password.classList.add('active')
-        }
-        else{
+        } else {
             password.classList.remove('active')
         }
     }
