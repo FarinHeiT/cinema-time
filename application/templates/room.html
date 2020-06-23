@@ -11,12 +11,44 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
+    <!-- Vue.js development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/room.css') }}">
 </head>
 <body>
     <div class="main-container">
-        <div id="screen"></div>
-        <div id="chat"></div>
+        <div id="main-panel">
+            <div id="screen">
+                <span style="text-align: center; font-size: 50px">VIDEO PLAYER</span>
+            </div>
+            <div id="control-panel">
+                <div id="playlist">
+                    <h4>Playlist</h4>
+                    <ion-icon name="add-outline" id="add-icon"> </ion-icon>
+                    <ul>
+                        <li>Avengers <ion-icon name="close-outline"></ion-icon></li>
+                        <li>Batman <ion-icon name="close-outline"></ion-icon></li>
+                        <li>Spider Man <ion-icon name="close-outline"></ion-icon></li>
+                        <li>Back To THe Future <ion-icon name="close-outline"></ion-icon></li>
+                        <li>Back To THe Future <ion-icon name="close-outline"></ion-icon></li>
+                        <li>Back To THe Future <ion-icon name="close-outline"></ion-icon></li>
+                        <li>Back To THe Future <ion-icon name="close-outline"></ion-icon></li>
+                        <li>Back To THe Future <ion-icon name="close-outline"></ion-icon></li>
+
+                    </ul>
+                </div>
+                <div id="userlist">
+
+                </div>
+            </div>
+        </div>
+        <div id="chat">
+
+        </div>
     </div>
+
+    {#  ionicons  #}
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 </html>

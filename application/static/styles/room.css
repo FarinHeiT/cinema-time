@@ -13,11 +13,69 @@ html {
     height: 100vh;
 }
 
-#screen {
-    width: 80%;
+#main-panel {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
 }
 
 #chat {
-    width: 20%;
-    border-left: 5px solid #00beaf;
+    width: 15%;
+    border-left: 3px solid #00beaf;
+}
+
+#screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+#control-panel {
+    height: 20%;
+    display: flex;
+    border-top: 3px solid #00beaf;
+}
+
+#playlist {
+    border-right: 3px solid #00beaf;
+    width: 50%;
+    display: block;
+    overflow-y: scroll;
+    position: relative;
+}
+
+#userlist {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+h4 {
+    margin: 3px 0;
+    display: inline-block;
+    color: #00e0ce;
+    position: fixed;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    color: #009c8f;
+    padding-left: 10px;
+}
+
+ion-icon {
+    font-size: 25px;
+    margin: 3px;
+    color: #00e0ce;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+}
+
+li ion-icon {
+    color: #009c8f;
 }
