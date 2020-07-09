@@ -51,16 +51,16 @@
                     </div>
                     <div class="modal-body">
                         <form>
-                        <input type="text" placeholder="Name">
-                    </br>
-                        <input type="checkbox" id="private-room-checkbox" name="checkbox">
-                        <label for="checkbox">Private</label><br>
-                        <div id="invisible">
-                        <input id="password" type="text" placeholder="password">
-                    </div>
-                </br>
-                    <button class="pure-button">Create Room</button>
-                    </form>
+                            {{ form.room_name(type="text", placeholder="Name") }}
+                            </br>
+                            {{ form.private_room(type="checkbox", id="private-room-checkbox") }}
+                            <label for="checkbox">Private</label><br>
+                            <div id="invisible">
+                                {{ form.room_password(id="password", type="text", placeholder="password") }}
+                            </div>
+                            </br>
+                            {{ form.create_room(class="pure-button") }}
+                        </form>
                     </div>
                 </div>
                 <div id="modal-overlay">
