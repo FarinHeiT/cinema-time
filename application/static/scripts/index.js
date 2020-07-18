@@ -23,8 +23,12 @@ window.onload = function () {
 
     openRoomSettings.onclick = function () {
         const modal = document.querySelector('#room-settings')
+        const link_out = document.querySelector("#the_link_two")
+        const link_in = document.querySelector('#the_link_one')
+        link_in.value = link_out.value
         modal.classList.add('active')
         overlay.classList.add('active')
+
 
     }
 

@@ -4,7 +4,7 @@ from application import socketio
 room = Blueprint('room', __name__, url_prefix='/room')
 
 
-@room.route('/<room_name>')
+@room.route('/<room_name>', methods=('GET', 'POST'))
 def room_details(room_name):
     return render_template('room.html')
 

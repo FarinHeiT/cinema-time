@@ -41,7 +41,7 @@
                 <h1>Put The Link In Here</h1>
                 <h4>Supported: YouTube, Direct Link, etc.</h4>
                 <div class="input-container">
-                    <input type="text" placeholder="Link"/>
+                    <input id = "the_link_two" type="text" placeholder="Link"/>
                     <button class="pure-button">Create Room</button>
                 </div>
                 <div id="room-settings">
@@ -50,7 +50,8 @@
                         <button class="modal-close">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form method="post" action="/">
+                            {{ form.csrf_token }}
                             {{ form.room_name(type="text", placeholder="Name") }}
                             </br>
                             {{ form.private_room(type="checkbox", id="private-room-checkbox") }}
@@ -60,6 +61,7 @@
                             </div>
                             </br>
                             {{ form.create_room(class="pure-button") }}
+                            {{ form.link(hidden, id = "the_link_one") }}
                         </form>
                     </div>
                 </div>
